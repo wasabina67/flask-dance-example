@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 from flask import Flask, redirect, url_for
-from flask_dance.consumer import OAuth2ConsumerBlueprint
+from flask_dance.consumer import OAuth2ConsumerBlueprint, oauth_authorized
 
 load_dotenv()
 
@@ -17,7 +17,7 @@ gh_blueprint = OAuth2ConsumerBlueprint(
     base_url="https://api.github.com/",
     authorization_url="https://github.com/login/oauth/authorize",
     token_url="https://github.com/login/oauth/access_token",
-    redirect_url=None,
+    redirect_url="/github_authorized",
     redirect_to=None,
     login_url=None,
     authorized_url=None,
@@ -33,6 +33,13 @@ def index():
     resp = gh_blueprint.session.get("/user")
     if not resp.ok:
         return redirect(url_for("github.login"))
+    return "You are @{login} on GitHub".format(login=resp.json()["login"])
+
+
+@app.route("/github_authorized")
+def github_authorized():
+    resp = gh_blueprint.session.get("/user")
+    assert resp.ok
     return "You are @{login} on GitHub".format(login=resp.json()["login"])
 
 
