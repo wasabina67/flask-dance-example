@@ -11,6 +11,19 @@ Flask dance example
 https://localhost:3000/login/github/authorized
 ```
 
+### Create .env
+
+```bash
+cp -p .env.example .env
+```
+
+- SECRET_KEY
+  - aaaa
+- CLIENT_ID
+  - aaaa
+- CLIENT_SECRET
+  - aaaa
+
 ## Run
 
 ```bash
