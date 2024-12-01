@@ -40,5 +40,12 @@ def github_authorized():
     return "You are @{login} on GitHub".format(login=resp.json()["login"])
 
 
+@oauth_authorized.connect_via(gh_blueprint)
+def authorized(bp, token):
+    # print(bp)
+    # print(token)
+    return
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3000, ssl_context="adhoc", debug=True)
