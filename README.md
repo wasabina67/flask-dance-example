@@ -18,11 +18,11 @@ cp -p .env.example .env
 ```
 
 - SECRET_KEY
-  - aaaa
+  - Flask secret key
 - CLIENT_ID
-  - aaaa
+  - The client ID for your application on GitHub
 - CLIENT_SECRET
-  - aaaa
+  - The client secret for your application on GitHub
 
 ## Run
 
