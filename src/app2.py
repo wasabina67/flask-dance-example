@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 from flask import Flask, redirect, url_for
-from flask_dance import OAuth2ConsumerBlueprint
+from flask_dance.consumer import OAuth2ConsumerBlueprint
 
 load_dotenv()
 
