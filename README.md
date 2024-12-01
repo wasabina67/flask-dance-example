@@ -27,7 +27,7 @@ cp -p .env.example .env
 
 ## Run
 
-Using `make_github_blueprint`
+### Using `make_github_blueprint`
 
 ```bash
 python src/app.py
@@ -35,9 +35,7 @@ python src/app.py
 
 Open https://localhost:3000/
 
-## Run
-
-Using `OAuth2ConsumerBlueprint`
+### Using `OAuth2ConsumerBlueprint`
 
 ```bash
 python src/app2.py
