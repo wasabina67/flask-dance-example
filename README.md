@@ -9,4 +9,4 @@ Flask dance example
 python src/app.py
 ```
 
-Open https://localhost:3443/
+Open https://localhost:3000/

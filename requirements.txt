@@ -1,2 +1,4 @@
 Flask
+Flask-Dance
 python-dotenv
+cryptography
