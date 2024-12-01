@@ -26,8 +26,14 @@ cp -p .env.example .env
 
 ## Run
 
+Using `make_github_blueprint`
+
 ```bash
 python src/app.py
 ```
 
 Open https://localhost:3000/
+
+## Run
+
+Using `OAuth2ConsumerBlueprint`
