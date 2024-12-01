@@ -3,6 +3,7 @@ Flask dance example
 
 ## Setup
 
+[Flask DANCE](https://flask-dance.readthedocs.io/en/latest/)
 [GitHub Quickstart](https://flask-dance.readthedocs.io/en/v1.3.0/quickstarts/github.html)
 
 ### Authorization callback URL
@@ -37,3 +38,9 @@ Open https://localhost:3000/
 ## Run
 
 Using `OAuth2ConsumerBlueprint`
+
+```bash
+python src/app2.py
+```
+
+Open https://localhost:3000/
