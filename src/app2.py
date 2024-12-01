@@ -30,10 +30,7 @@ app.register_blueprint(gh_blueprint, url_prefix="/login")
 
 @app.route("/")
 def index():
-    resp = gh_blueprint.session.get("/user")
-    if not resp.ok:
-        return redirect(url_for("github.login"))
-    return "You are @{login} on GitHub".format(login=resp.json()["login"])
+    return redirect(url_for("github.login"))
 
 
 @app.route("/github_authorized")
