@@ -2,7 +2,7 @@ import os
 
 from dotenv import load_dotenv
 from flask import Flask, redirect, url_for
-from flask_dance.contrib.github import make_github_blueprint, github
+from flask_dance.contrib.github import github, make_github_blueprint
 
 load_dotenv()
 
